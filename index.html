@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WDD 231 – Web Frontend Development I – Dawon Gregory</title>
+
+    <meta name="description" content="WDD 231 Web Frontend Development I course home page for Dawon Gregory.">
+
+    <meta name="author" content="Dawon Gregory">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="header-top">
+
+            <div class="site-branding">
+
+                <!-- BYU-Idaho SVG Logo -->
+                <img src="images/byupw.jpg" alt="Brigham Young University-Idaho logo" width="80" height="80">
+
+                <span>
+                    Dawon Gregory
+                </span>
+
+            </div>
+
+            <!-- Mobile Navigation Button -->
+            <button id="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false">
+                ☰
+            </button>
+
+        </div>
+
+        <nav id="navigation">
+
+            <a href="index.html" class="active">
+                Home
+            </a>
+
+            <a href="#">
+                Chamber
+            </a>
+
+            <a href="#">
+                Final
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <h1>Home</h1>
+
+        <div class="home-grid">
+
+            <!-- About Me Section -->
+            <section class="card about-section">
+
+                <h2>About Me</h2>
+
+                <div class="about-content">
+
+                    <div class="about-text">
+
+                        <p>
+                            Hello, my name is Dawon Gregory. I am a student at
+                            Brigham Young University–Idaho. I am currently
+                            working on my degree in Software Development.
+                        </p>
+
+                        <p>
+                            I enjoy learning about technology, software
+                            development, and web development. I also enjoy
+                            spending time with my family and playing guitar.
+                        </p>
+
+                    </div>
+
+                    <figure>
+                        <img src="images/selfie.png" alt="Dawon Gregory" width="300" height="250">
+                    </figure>
+
+                </div>
+
+            </section>
+
+
+            <!-- Student Photo / Location Section -->
+            <section class="card student-section">
+
+                <h2>Student Photo</h2>
+
+                <figure>
+                    <img src="images/texas_flag.jpg" alt="Texas flag" width="300" height="200">
+                </figure>
+
+                <p>
+                    I am currently living in Texas, USA. I enjoy living in
+                    Texas and all that the state has to offer.
+                </p>
+
+            </section>
+
+
+            <!-- Course Work Section -->
+            <section class="card course-section">
+
+                <h2>Web and Computer Programming Certificate</h2>
+
+                <div id="course-buttons">
+
+                    <button id="all-courses" type="button">
+                        All Courses
+                    </button>
+
+                    <button id="wdd-courses" type="button">
+                        WDD Courses
+                    </button>
+
+                    <button id="cse-courses" type="button">
+                        CSE Courses
+                    </button>
+
+                </div>
+
+
+                <!-- Courses will be created with JavaScript -->
+                <div id="course-list"></div>
+
+
+                <p class="total-credits">
+                    Total Credits:
+                    <span id="total-credits">0</span>
+                </p>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+
+        <!-- Social Media Links -->
+        <div class="social-links">
+
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                GitHub
+            </a>
+
+            <a href="https://www.linkedin.com/in/dawon-gregory/" target="_blank" rel="noopener noreferrer"
+                aria-label="LinkedIn">
+                LinkedIn
+            </a>
+
+        </div>
+
+
+        <!-- Copyright -->
+        <p>
+            &copy;
+            <span id="currentyear"></span>
+            Dawon Gregory | Texas, USA
+        </p>
+
+
+        <!-- Last Modified -->
+        <p>
+            Last Modified:
+            <span id="lastModified"></span>
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

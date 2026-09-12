@@ -1,0 +1,163 @@
+/* ================================
+   LARGE SCREEN STYLES
+   ================================ */
+
+@media (min-width: 640px) {
+
+    /* ============================
+       HEADER
+       ============================ */
+
+    .header-top {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem 2rem;
+    }
+
+    .site-branding img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .site-branding span {
+        font-size: 1.5rem;
+    }
+
+
+    /* ============================
+       NAVIGATION
+       ============================ */
+
+    #menu-button {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: #002b44;
+    }
+
+    nav a {
+        min-width: 120px;
+        padding: 0.75rem 1.5rem;
+        border-top: none;
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    nav a:last-child {
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+
+    /* ============================
+       MAIN
+       ============================ */
+
+    main {
+        padding: 2rem;
+    }
+
+    main > h1 {
+        font-size: 2.25rem;
+        margin-bottom: 1.5rem;
+    }
+
+
+    /* ============================
+       HOME PAGE GRID
+       ============================ */
+
+    .home-grid {
+        grid-template-columns: 2fr 1fr;
+        gap: 1.5rem;
+    }
+
+
+    /* About Me spans the larger area */
+
+    .about-section {
+        grid-column: 1;
+    }
+
+
+    /* Student Photo */
+
+    .student-section {
+        grid-column: 2;
+    }
+
+
+    /* Course section spans full width */
+
+    .course-section {
+        grid-column: 1 / -1;
+    }
+
+
+    /* ============================
+       ABOUT ME
+       ============================ */
+
+    .about-content {
+        display: grid;
+        grid-template-columns: 1fr 250px;
+        gap: 1.5rem;
+        align-items: center;
+        padding: 1.5rem;
+    }
+
+    .about-text {
+        margin-bottom: 0;
+    }
+
+
+    /* ============================
+       COURSE LIST
+       ============================ */
+
+    #course-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+
+    /* ============================
+       COURSE BUTTONS
+       ============================ */
+
+    #course-buttons {
+        justify-content: center;
+    }
+
+    #course-buttons button {
+        flex: 0 1 180px;
+    }
+
+
+    /* ============================
+       FOOTER
+       ============================ */
+
+    footer {
+        padding: 2rem;
+    }
+}
+
+
+/* ================================
+   EXTRA LARGE SCREENS
+   ================================ */
+
+@media (min-width: 900px) {
+
+    .home-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    #course-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}

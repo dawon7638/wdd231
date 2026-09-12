@@ -1,0 +1,314 @@
+/* ================================
+   GLOBAL STYLES
+   ================================ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background-color: #f5f5f5;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: inherit;
+}
+
+
+/* ================================
+   HEADER
+   ================================ */
+
+header {
+    background-color: #003b5c;
+    color: white;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.site-branding {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.site-branding img {
+    width: 55px;
+    height: 55px;
+}
+
+.site-branding span {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+
+/* ================================
+   HAMBURGER BUTTON
+   ================================ */
+
+#menu-button {
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+}
+
+
+/* ================================
+   NAVIGATION
+   ================================ */
+
+nav {
+    display: none;
+    flex-direction: column;
+    background-color: #002b44;
+}
+
+nav.open {
+    display: flex;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    font-weight: 500;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+nav a:hover,
+nav a.active {
+    background-color: #006d9c;
+}
+
+
+/* ================================
+   MAIN
+   ================================ */
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+main > h1 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+
+/* ================================
+   HOME GRID
+   ================================ */
+
+.home-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+
+/* ================================
+   CARDS / SECTIONS
+   ================================ */
+
+.card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.card h2 {
+    background-color: #003b5c;
+    color: white;
+    padding: 0.75rem 1rem;
+    font-size: 1.25rem;
+}
+
+.card p {
+    margin-bottom: 1rem;
+}
+
+
+/* ================================
+   ABOUT ME
+   ================================ */
+
+.about-content {
+    padding: 1rem;
+}
+
+.about-text {
+    margin-bottom: 1rem;
+}
+
+.about-content figure {
+    display: flex;
+    justify-content: center;
+}
+
+.about-content img {
+    border-radius: 4px;
+}
+
+
+/* ================================
+   STUDENT PHOTO
+   ================================ */
+
+.student-section {
+    text-align: center;
+}
+
+.student-section figure {
+    padding: 1rem;
+}
+
+.student-section img {
+    margin: 0 auto;
+    border-radius: 4px;
+}
+
+.student-section p {
+    padding: 0 1rem 1rem;
+}
+
+
+/* ================================
+   COURSE BUTTONS
+   ================================ */
+
+#course-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 1rem;
+}
+
+#course-buttons button {
+    flex: 1 1 auto;
+    min-width: 100px;
+    padding: 0.65rem 1rem;
+    border: 1px solid #003b5c;
+    border-radius: 4px;
+    background-color: #003b5c;
+    color: white;
+    font-family: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#course-buttons button:hover {
+    background-color: #006d9c;
+}
+
+
+/* ================================
+   COURSE LIST
+   ================================ */
+
+#course-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 0 1rem 1rem;
+}
+
+.course {
+    padding: 1rem;
+    border: 1px solid #999;
+    border-radius: 4px;
+    background-color: #eee;
+    text-align: center;
+    font-weight: 700;
+}
+
+
+/* Completed courses */
+
+.course.completed {
+    background-color: #d9f0df;
+    border-color: #2e7d32;
+    color: #1b5e20;
+}
+
+
+/* Course code */
+
+.course-code {
+    font-weight: 700;
+}
+
+
+/* ================================
+   TOTAL CREDITS
+   ================================ */
+
+.total-credits {
+    margin: 0;
+    padding: 1rem;
+    border-top: 1px solid #ccc;
+    font-weight: 700;
+    text-align: center;
+}
+
+
+/* ================================
+   FOOTER
+   ================================ */
+
+footer {
+    margin-top: 2rem;
+    padding: 1.5rem 1rem;
+    background-color: #003b5c;
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+footer p:last-child {
+    margin-bottom: 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
