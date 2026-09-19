@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Smith Construction",
+        "address": "123 Main Street",
+        "phone": "555-123-4567",
+        "website": "https://example.com",
+        "image": "smith-construction.jpg",
+        "membership": "Gold"
+    },
+    {
+        "name": "Gregory Financial",
+        "address": "245 Oak Avenue",
+        "phone": "555-234-5678",
+        "website": "https://example.com",
+        "image": "gregory-financial.jpg",
+        "membership": "Silver"
+    },
+    {
+        "name": "East Texas Dental",
+        "address": "315 Pine Street",
+        "phone": "555-345-6789",
+        "website": "https://example.com",
+        "image": "east-texas-dental.jpg",
+        "membership": "Gold"
+    },
+    {
+        "name": "Texas Auto Repair",
+        "address": "425 Highway Drive",
+        "phone": "555-456-7890",
+        "website": "https://example.com",
+        "image": "texas-auto-repair.jpg",
+        "membership": "Silver"
+    },
+    {
+        "name": "Green Valley Landscaping",
+        "address": "510 Garden Road",
+        "phone": "555-567-8901",
+        "website": "https://example.com",
+        "image": "green-valley.jpg",
+        "membership": "Bronze"
+    },
+    {
+        "name": "Pine Street Bakery",
+        "address": "625 Pine Street",
+        "phone": "555-678-9012",
+        "website": "https://example.com",
+        "image": "pine-street-bakery.jpg",
+        "membership": "Gold"
+    },
+    {
+        "name": "East Texas Computer Services",
+        "address": "730 Technology Drive",
+        "phone": "555-789-0123",
+        "website": "https://example.com",
+        "image": "east-texas-computers.jpg",
+        "membership": "Silver"
+    }
+]

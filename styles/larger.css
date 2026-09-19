@@ -59,7 +59,7 @@
         padding: 2rem;
     }
 
-    main > h1 {
+    main>h1 {
         font-size: 2.25rem;
         margin-bottom: 1.5rem;
     }
@@ -160,4 +160,26 @@
         grid-template-columns: repeat(3, 1fr);
     }
 
+    .member-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+/* ============================
+   CHAMBER DIRECTORY
+   ============================ */
+
+.member-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.member-card {
+    padding: 1.5rem;
+}
+
+.member-list .member-card {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
 }
