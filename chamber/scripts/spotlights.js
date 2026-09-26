@@ -1,35 +1,45 @@
-const spotlightContainer = document.querySelector("#spotlight-container");
+const spotlightContainer =
+    document.querySelector("#spotlight-container");
 
 
 async function loadSpotlights() {
     try {
-        const response = await fetch("data/members.json");
+        const response =
+            await fetch("data/members.json");
 
         if (!response.ok) {
             throw new Error("Unable to load member data.");
         }
 
-        const data = await response.json();
-
-        const members = data.members;
-
-        const eligibleMembers = members.filter((member) =>
-            member.membership === "Gold" ||
-            member.membership === "Silver"
-        );
+        const members =
+            await response.json();
 
 
-        const shuffledMembers = [...eligibleMembers].sort(
-            () => Math.random() - 0.5
-        );
+        // Only Gold and Silver members can be spotlights.
+        const eligibleMembers =
+            members.filter((member) =>
+                member.membership === "Gold" ||
+                member.membership === "Silver"
+            );
 
 
+        // Randomize the eligible members.
+        const shuffledMembers =
+            [...eligibleMembers].sort(
+                () => Math.random() - 0.5
+            );
+
+
+        // Randomly display 2 or 3 members.
         const numberOfSpotlights =
             Math.floor(Math.random() * 2) + 2;
 
 
         const selectedMembers =
-            shuffledMembers.slice(0, numberOfSpotlights);
+            shuffledMembers.slice(
+                0,
+                numberOfSpotlights
+            );
 
 
         displaySpotlights(selectedMembers);
@@ -46,58 +56,87 @@ async function loadSpotlights() {
 function displaySpotlights(members) {
     spotlightContainer.innerHTML = "";
 
+
     members.forEach((member) => {
 
-        const card = document.createElement("article");
+        const card =
+            document.createElement("article");
 
         card.classList.add("spotlight-card");
 
 
-        const logo = document.createElement("img");
+        // Company logo
+        const logo =
+            document.createElement("img");
 
-        logo.src = member.image;
-        logo.alt = `${member.name} logo`;
+        logo.src =
+            `images/${member.image}`;
+
+        logo.alt =
+            `${member.name} logo`;
+
         logo.loading = "lazy";
 
 
-        const companyName = document.createElement("h3");
+        // Company name
+        const companyName =
+            document.createElement("h3");
 
-        companyName.textContent = member.name;
+        companyName.textContent =
+            member.name;
 
 
-        const phone = document.createElement("p");
+        // Phone
+        const phone =
+            document.createElement("p");
 
         phone.innerHTML =
             `<strong>Phone:</strong> ${member.phone}`;
 
 
-        const address = document.createElement("p");
+        // Address
+        const address =
+            document.createElement("p");
 
         address.innerHTML =
             `<strong>Address:</strong> ${member.address}`;
 
 
-        const website = document.createElement("p");
+        // Website
+        const website =
+            document.createElement("p");
 
-        const websiteLink = document.createElement("a");
+        const websiteLink =
+            document.createElement("a");
 
-        websiteLink.href = member.website;
-        websiteLink.textContent = "Visit Website";
-        websiteLink.target = "_blank";
-        websiteLink.rel = "noopener noreferrer";
+        websiteLink.href =
+            member.website;
 
+        websiteLink.textContent =
+            "Visit Website";
+
+        websiteLink.target =
+            "_blank";
+
+        websiteLink.rel =
+            "noopener noreferrer";
 
         website.appendChild(websiteLink);
 
 
-        const membership = document.createElement("p");
+        // Membership level
+        const membership =
+            document.createElement("p");
 
-        membership.classList.add("membership-level");
+        membership.classList.add(
+            "membership-level"
+        );
 
         membership.textContent =
             `${member.membership} Member`;
 
 
+        // Add everything to the card.
         card.appendChild(logo);
         card.appendChild(companyName);
         card.appendChild(phone);
@@ -106,6 +145,7 @@ function displaySpotlights(members) {
         card.appendChild(membership);
 
 
+        // Add card to the page.
         spotlightContainer.appendChild(card);
     });
 }

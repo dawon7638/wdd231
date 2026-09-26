@@ -1,8 +1,8 @@
-const API_KEY = "f2414679bf65a4b8994efd90c03d93dd";
+
+const API_KEY = "d502936e2ac0b9539ba9eeb9483a1d6c";
 
 const latitude = 32.3513;
 const longitude = -95.3011;
-
 
 const currentWeatherURL =
     `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=imperial`;
@@ -11,9 +11,9 @@ const forecastURL =
     `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=imperial`;
 
 
-
 async function getWeather() {
     try {
+        // Get current weather
         const currentResponse = await fetch(currentWeatherURL);
 
         if (!currentResponse.ok) {
@@ -25,6 +25,7 @@ async function getWeather() {
         displayCurrentWeather(currentData);
 
 
+        // Get 5-day forecast
         const forecastResponse = await fetch(forecastURL);
 
         if (!forecastResponse.ok) {
@@ -39,12 +40,22 @@ async function getWeather() {
         console.error("Weather error:", error);
 
         document.querySelector("#current-temp").textContent = "--";
+
         document.querySelector("#weather-description").textContent =
             "Weather data unavailable.";
 
-        document.querySelector("#forecast-day-1").textContent = "Unavailable";
-        document.querySelector("#forecast-day-2").textContent = "Unavailable";
-        document.querySelector("#forecast-day-3").textContent = "Unavailable";
+        document.querySelector("#forecast-day-1").textContent =
+            "Unavailable";
+
+        document.querySelector("#forecast-day-2").textContent =
+            "Unavailable";
+
+        document.querySelector("#forecast-day-3").textContent =
+            "Unavailable";
+
+        document.querySelector("#forecast-temp-1").textContent = "--";
+        document.querySelector("#forecast-temp-2").textContent = "--";
+        document.querySelector("#forecast-temp-3").textContent = "--";
     }
 }
 
@@ -53,7 +64,8 @@ function displayCurrentWeather(data) {
     const temperature = Math.round(data.main.temp);
     const description = data.weather[0].description;
 
-    document.querySelector("#current-temp").textContent = temperature;
+    document.querySelector("#current-temp").textContent =
+        temperature;
 
     document.querySelector("#weather-description").textContent =
         description;
@@ -61,6 +73,14 @@ function displayCurrentWeather(data) {
 
 
 function displayForecast(data) {
+    const today = new Date();
+
+    const todayString = today.toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "numeric",
+        day: "numeric"
+    });
+
     const forecastDays = [];
 
     data.list.forEach((forecast) => {
@@ -72,7 +92,11 @@ function displayForecast(data) {
             day: "numeric"
         });
 
-        if (!forecastDays.some((day) => day.date === dateString)) {
+        // Only add future calendar days.
+        if (
+            dateString !== todayString &&
+            !forecastDays.some((day) => day.date === dateString)
+        ) {
             forecastDays.push({
                 date: dateString,
                 timestamp: forecast.dt,
@@ -82,7 +106,8 @@ function displayForecast(data) {
     });
 
 
-    const threeDayForecast = forecastDays.slice(1, 4);
+    // Get the next three days.
+    const threeDayForecast = forecastDays.slice(0, 3);
 
 
     threeDayForecast.forEach((day, index) => {
@@ -94,11 +119,13 @@ function displayForecast(data) {
 
         const temperature = Math.round(day.temperature);
 
-        document.querySelector(`#forecast-day-${index + 1}`).textContent =
-            dayName;
+        document.querySelector(
+            `#forecast-day-${index + 1}`
+        ).textContent = dayName;
 
-        document.querySelector(`#forecast-temp-${index + 1}`).textContent =
-            temperature;
+        document.querySelector(
+            `#forecast-temp-${index + 1}`
+        ).textContent = temperature;
     });
 }
 
