@@ -5,31 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Chamber Directory | WDD 231 – Dawon Gregory</title>
+    <title>Business Directory | Tyler Chamber of Commerce</title>
 
-    <meta name="description" content="Chamber of Commerce member directory for WDD 231 by Dawon Gregory.">
+    <meta name="description"
+        content="Browse the Tyler Chamber of Commerce business directory and discover local businesses in Tyler, Texas.">
 
     <meta name="author" content="Dawon Gregory">
 
-    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/directory.css">
 
-    <!-- JavaScript -->
+    <link rel="icon" href="images/favicon.ico">
+
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
-    <script src="scripts/courses.js" defer></script>
-    <script src="scripts/course.js" defer></script>
     <script src="scripts/directory.js" defer></script>
-
-    <!-- Favicon -->
-    <link rel="icon" href="images/favicon.ico">
 </head>
 
 <body>
@@ -39,16 +35,11 @@
         <div class="header-top">
 
             <div class="site-branding">
+                <img src="images/byupw.jpg" alt="Tyler Chamber of Commerce logo">
 
-                <img src="images/byupw.jpg" alt="Brigham Young University-Idaho logo" width="80" height="80">
-
-                <span>
-                    Dawon Gregory
-                </span>
-
+                <span>Tyler Chamber of Commerce</span>
             </div>
 
-            <!-- Mobile Navigation Button -->
             <button id="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false">
                 ☰
             </button>
@@ -62,11 +53,15 @@
             </a>
 
             <a href="directory.html" class="active">
-                Chamber
+                Directory
             </a>
 
-            <a href="#">
-                Final
+            <a href="join.html">
+                Join
+            </a>
+
+            <a href="discover.html">
+                Discover
             </a>
 
         </nav>
@@ -76,24 +71,29 @@
 
     <main>
 
-        <h1>Chamber Member Directory</h1>
+        <h1>Business Directory</h1>
 
-        <!-- Grid/List Buttons -->
+
+        <!-- DIRECTORY VIEW CONTROLS -->
+
         <div class="directory-controls">
 
-            <button id="grid" type="button" class="active">
+            <button id="grid-view" type="button" class="active">
                 Grid
             </button>
 
-            <button id="list" type="button">
+            <button id="list-view" type="button">
                 List
             </button>
 
         </div>
 
 
-        <!-- Members are added here with JavaScript -->
-        <section id="members" class="member-grid">
+        <!-- BUSINESS DIRECTORY -->
+
+        <section id="member-container" class="member-grid" aria-label="Tyler Chamber business directory">
+
+            <!-- JavaScript will load business members here. -->
 
         </section>
 
@@ -102,30 +102,25 @@
 
     <footer>
 
-        <!-- Social Media Links -->
         <div class="social-links">
 
             <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 GitHub
             </a>
 
-            <a href="https://www.linkedin.com/in/dawon-gregory/" target="_blank" rel="noopener noreferrer"
-                aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 LinkedIn
             </a>
 
         </div>
 
-
-        <!-- Copyright -->
         <p>
             &copy;
             <span id="currentyear"></span>
-            Dawon Gregory | Texas, USA
+            Tyler Chamber of Commerce |
+            Tyler, Texas
         </p>
 
-
-        <!-- Last Modified -->
         <p>
             Last Modified:
             <span id="lastModified"></span>

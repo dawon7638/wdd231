@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tyler Chamber of Commerce | Home</title>
+
+    <meta name="description"
+        content="Tyler Chamber of Commerce connecting local businesses and strengthening the Tyler, Texas community.">
+
+    <meta name="author" content="Dawon Gregory">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/home.css">
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlights.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-top">
+
+            <div class="site-branding">
+                <img src="images/byupw.jpg" alt="Tyler Chamber of Commerce logo">
+                <span>Tyler Chamber of Commerce</span>
+            </div>
+
+            <button id="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false">
+                ☰
+            </button>
+
+        </div>
+
+        <nav id="navigation">
+            <a href="index.html" class="active">Home</a>
+            <a href="directory.html">Directory</a>
+            <a href="join.html">Join</a>
+            <a href="discover.html">Discover</a>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero">
+
+            <img src="images/downtown-tyler.jpeg" alt="Downtown Tyler Texas">
+
+            <div class="hero-content">
+
+                <h1>Tyler Chamber of Commerce</h1>
+
+                <p>
+                    Connecting businesses and building a stronger
+                    Tyler community.
+                </p>
+
+                <a href="join.html" class="hero-cta">
+                    Join the Chamber
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- CURRENT EVENTS -->
+        <section class="events">
+
+            <h2>Current Events</h2>
+
+            <div class="events-container">
+
+                <article class="event-card">
+
+                    <h3>Business Networking Breakfast</h3>
+
+                    <p>
+                        Connect with local business owners and
+                        community leaders.
+                    </p>
+
+                    <p>
+                        <strong>Date:</strong>
+                        October 3, 2026
+                    </p>
+
+                    <p>
+                        <strong>Location:</strong>
+                        Tyler Chamber of Commerce
+                    </p>
+
+                </article>
+
+
+                <article class="event-card">
+
+                    <h3>Community Business Expo</h3>
+
+                    <p>
+                        Discover local businesses, products,
+                        and services throughout the Tyler area.
+                    </p>
+
+                    <p>
+                        <strong>Date:</strong>
+                        October 10, 2026
+                    </p>
+
+                    <p>
+                        <strong>Location:</strong>
+                        Tyler Convention Center
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- WEATHER -->
+        <section class="weather">
+
+            <h2>Tyler Weather</h2>
+
+            <div class="current-weather">
+
+                <h3>Current Weather</h3>
+
+                <p class="current-temperature">
+                    <span id="current-temp">--</span>°F
+                </p>
+
+                <p class="weather-description">
+                    <span id="weather-description">
+                        Loading weather...
+                    </span>
+                </p>
+
+            </div>
+
+
+            <!-- THREE-DAY FORECAST -->
+            <div class="forecast">
+
+                <h3>3-Day Forecast</h3>
+
+                <div class="forecast-container">
+
+                    <article class="forecast-card">
+
+                        <h3 id="forecast-day-1">
+                            Day 1
+                        </h3>
+
+                        <p class="forecast-temperature">
+                            <span id="forecast-temp-1">--</span>°F
+                        </p>
+
+                    </article>
+
+
+                    <article class="forecast-card">
+
+                        <h3 id="forecast-day-2">
+                            Day 2
+                        </h3>
+
+                        <p class="forecast-temperature">
+                            <span id="forecast-temp-2">--</span>°F
+                        </p>
+
+                    </article>
+
+
+                    <article class="forecast-card">
+
+                        <h3 id="forecast-day-3">
+                            Day 3
+                        </h3>
+
+                        <p class="forecast-temperature">
+                            <span id="forecast-temp-3">--</span>°F
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- COMPANY SPOTLIGHTS -->
+        <section class="spotlights">
+
+            <h2>Business Spotlights</h2>
+
+            <div id="spotlight-container" class="spotlight-container">
+
+                <!-- JavaScript will randomly load
+                     2–3 Gold or Silver members here. -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="social-links">
+
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                GitHub
+            </a>
+
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                LinkedIn
+            </a>
+
+        </div>
+
+        <p>
+            &copy;
+            <span id="currentyear"></span>
+            Tyler Chamber of Commerce |
+            Tyler, Texas
+        </p>
+
+        <p>
+            Last Modified:
+            <span id="lastModified"></span>
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

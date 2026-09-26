@@ -49,8 +49,8 @@ header {
 }
 
 .site-branding img {
-    width: 55px;
-    height: 55px;
+    width: 50px;
+    height: auto;
 }
 
 .site-branding span {
