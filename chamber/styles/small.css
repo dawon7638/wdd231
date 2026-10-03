@@ -16,9 +16,9 @@ body {
 }
 
 img {
+    display: block;
     max-width: 100%;
     height: auto;
-    display: block;
 }
 
 a {
@@ -32,7 +32,7 @@ a {
 
 header {
     background-color: #003b5c;
-    color: white;
+    color: #fff;
 }
 
 .header-top {
@@ -64,12 +64,12 @@ header {
    ================================ */
 
 #menu-button {
+    padding: 0.25rem 0.5rem;
     border: none;
-    background: transparent;
-    color: white;
+    background-color: transparent;
+    color: #fff;
     font-size: 2rem;
     cursor: pointer;
-    padding: 0.25rem 0.5rem;
 }
 
 
@@ -88,12 +88,12 @@ nav.open {
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
     padding: 0.75rem 1rem;
-    text-align: center;
+    border-top: 1px solid rgb(255 255 255 / 15%);
+    color: #fff;
     font-weight: 500;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    text-align: center;
+    text-decoration: none;
 }
 
 nav a:hover,
@@ -113,166 +113,9 @@ main {
     padding: 1rem;
 }
 
-main>h1 {
+main > h1 {
     margin-bottom: 1rem;
     font-size: 2rem;
-}
-
-
-/* ================================
-   HOME GRID
-   ================================ */
-
-.home-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-}
-
-
-/* ================================
-   CARDS / SECTIONS
-   ================================ */
-
-.card {
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    overflow: hidden;
-}
-
-.card h2 {
-    background-color: #003b5c;
-    color: white;
-    padding: 0.75rem 1rem;
-    font-size: 1.25rem;
-}
-
-.card p {
-    margin-bottom: 1rem;
-}
-
-
-/* ================================
-   ABOUT ME
-   ================================ */
-
-.about-content {
-    padding: 1rem;
-}
-
-.about-text {
-    margin-bottom: 1rem;
-}
-
-.about-content figure {
-    display: flex;
-    justify-content: center;
-}
-
-.about-content img {
-    border-radius: 4px;
-}
-
-
-/* ================================
-   STUDENT PHOTO
-   ================================ */
-
-.student-section {
-    text-align: center;
-}
-
-.student-section figure {
-    padding: 1rem;
-}
-
-.student-section img {
-    margin: 0 auto;
-    border-radius: 4px;
-}
-
-.student-section p {
-    padding: 0 1rem 1rem;
-}
-
-
-/* ================================
-   COURSE BUTTONS
-   ================================ */
-
-#course-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    padding: 1rem;
-}
-
-#course-buttons button {
-    flex: 1 1 auto;
-    min-width: 100px;
-    padding: 0.65rem 1rem;
-    border: 1px solid #003b5c;
-    border-radius: 4px;
-    background-color: #003b5c;
-    color: white;
-    font-family: inherit;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-#course-buttons button:hover {
-    background-color: #006d9c;
-}
-
-
-/* ================================
-   COURSE LIST
-   ================================ */
-
-#course-list {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
-    padding: 0 1rem 1rem;
-}
-
-.course {
-    padding: 1rem;
-    border: 1px solid #999;
-    border-radius: 4px;
-    background-color: #eee;
-    text-align: center;
-    font-weight: 700;
-}
-
-
-/* Completed courses */
-
-.course.completed {
-    background-color: #d9f0df;
-    border-color: #2e7d32;
-    color: #1b5e20;
-}
-
-
-/* Course code */
-
-.course-code {
-    font-weight: 700;
-}
-
-
-/* ================================
-   TOTAL CREDITS
-   ================================ */
-
-.total-credits {
-    margin: 0;
-    padding: 1rem;
-    border-top: 1px solid #ccc;
-    font-weight: 700;
-    text-align: center;
 }
 
 
@@ -284,7 +127,7 @@ footer {
     margin-top: 2rem;
     padding: 1.5rem 1rem;
     background-color: #003b5c;
-    color: white;
+    color: #fff;
     text-align: center;
 }
 
@@ -304,7 +147,7 @@ footer p:last-child {
 }
 
 .social-links a {
-    color: white;
+    color: #fff;
     font-weight: 700;
     text-decoration: none;
 }
@@ -312,6 +155,7 @@ footer p:last-child {
 .social-links a:hover {
     text-decoration: underline;
 }
+
 
 /* ================================
    CHAMBER DIRECTORY
@@ -329,7 +173,7 @@ footer p:last-child {
     border: 1px solid #003b5c;
     border-radius: 4px;
     background-color: #003b5c;
-    color: white;
+    color: #fff;
     font-family: inherit;
     font-weight: 700;
     cursor: pointer;
@@ -352,24 +196,24 @@ footer p:last-child {
 }
 
 .member-card {
-    background-color: white;
+    padding: 1rem;
     border: 1px solid #ccc;
     border-radius: 6px;
-    padding: 1rem;
+    background-color: #fff;
     text-align: center;
 }
 
 .member-card img {
     width: 150px;
     height: 100px;
-    object-fit: contain;
     margin: 0 auto 1rem;
+    object-fit: contain;
 }
 
 .member-card h2 {
+    margin-bottom: 0.5rem;
     color: #003b5c;
     font-size: 1.25rem;
-    margin-bottom: 0.5rem;
 }
 
 .member-card p {
@@ -393,13 +237,14 @@ footer p:last-child {
 }
 
 .member-list .member-card {
-    text-align: left;
     border-radius: 0;
+    text-align: left;
 }
 
 .member-list .member-card img {
     display: none;
 }
+
 
 /* ================================
    JOIN PAGE
@@ -445,9 +290,16 @@ footer p:last-child {
 .application-section textarea {
     width: 100%;
     padding: 0.75rem;
-    border: 1px solid #999;
+    border: 1px solid #777;
     border-radius: 5px;
+    background-color: #fff;
     font: inherit;
+}
+
+.application-section input:focus,
+.application-section textarea:focus {
+    outline: 2px solid #006d9c;
+    outline-offset: 2px;
 }
 
 .application-section textarea {
@@ -465,7 +317,7 @@ footer p:last-child {
     flex-direction: column;
     gap: 0.75rem;
     padding: 1rem;
-    border: 1px solid #999;
+    border: 1px solid #777;
     border-radius: 6px;
     background-color: #fff;
 }
@@ -504,7 +356,8 @@ footer p:last-child {
     border: none;
     border-radius: 6px;
     background-color: #003b5c;
-    color: white;
+    color: #fff;
+    font-family: inherit;
     font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
@@ -512,6 +365,11 @@ footer p:last-child {
 
 .submit-button:hover {
     background-color: #006d9c;
+}
+
+.submit-button:focus {
+    outline: 3px solid #006d9c;
+    outline-offset: 3px;
 }
 
 
@@ -532,7 +390,6 @@ footer p:last-child {
     background-color: #e8f1f3;
     text-align: center;
     box-shadow: 0 3px 8px rgb(0 0 0 / 12%);
-
     opacity: 0;
     transform: translateY(25px);
     animation: card-entry 0.7s ease forwards;
@@ -552,6 +409,7 @@ footer p:last-child {
 
 .membership-card h3 {
     margin-bottom: 0.75rem;
+    color: #003b5c;
 }
 
 .membership-card p {
@@ -585,13 +443,18 @@ footer p:last-child {
     padding: 0.6rem 1rem;
     border-radius: 5px;
     background-color: #003b5c;
-    color: white;
+    color: #fff;
     font-weight: 500;
     text-decoration: none;
 }
 
 .modal-link:hover {
     background-color: #006d9c;
+}
+
+.modal-link:focus {
+    outline: 3px solid #006d9c;
+    outline-offset: 3px;
 }
 
 
@@ -605,7 +468,7 @@ footer p:last-child {
     padding: 0;
     border: 3px solid #003b5c;
     border-radius: 12px;
-    background-color: white;
+    background-color: #fff;
     color: #222;
     box-shadow: 0 12px 35px rgb(0 0 0 / 40%);
     overflow: auto;
@@ -630,7 +493,6 @@ footer p:last-child {
 .membership-modal::backdrop {
     background-color: rgb(0 0 0 / 50%);
     backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
 }
 
 
@@ -676,28 +538,149 @@ footer p:last-child {
     position: absolute;
     top: 0.65rem;
     right: 0.75rem;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 42px;
     height: 42px;
-
     border: 1px solid #999;
     border-radius: 7px;
-
     background-color: #f5f5f5;
     color: #222;
-
     font-size: 1.8rem;
     line-height: 1;
-
     cursor: pointer;
 }
 
 .close-modal:hover {
     background-color: #e5e5e5;
+}
+
+.close-modal:focus {
+    outline: 3px solid #006d9c;
+    outline-offset: 2px;
+}
+
+
+/* ================================
+   THANK YOU PAGE
+   ================================ */
+
+.thankyou-section {
+    width: 100%;
+    max-width: 750px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.thankyou-section h1 {
+    margin-bottom: 0.75rem;
+    color: #003b5c;
+}
+
+.thankyou-section > p {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+
+/* ================================
+   THANK YOU MESSAGE
+   ================================ */
+
+.thankyou-message {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-left: 5px solid #003b5c;
+    border-radius: 8px;
+    background-color: #e8f1f3;
+    text-align: left;
+}
+
+.thankyou-message h2 {
+    margin-bottom: 0.5rem;
+    color: #003b5c;
+}
+
+.thankyou-message p {
+    margin: 0;
+}
+
+
+/* ================================
+   SUBMISSION DETAILS
+   ================================ */
+
+.submission-details {
+    overflow: hidden;
+    border: 1px solid #c5d7dc;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 12%);
+    text-align: left;
+}
+
+.submission-details h2 {
+    margin: 0;
+    padding: 1rem 1.5rem;
+    background-color: #003b5c;
+    color: #fff;
+    font-size: 1.25rem;
+}
+
+.submission-details dl {
+    margin: 0;
+    padding: 0 1.5rem;
+}
+
+.submission-details dl div {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.submission-details dl div:last-child {
+    border-bottom: none;
+}
+
+.submission-details dt {
+    color: #003b5c;
+    font-weight: 700;
+}
+
+.submission-details dd {
+    margin: 0;
+    color: #333;
+    overflow-wrap: anywhere;
+}
+
+
+/* ================================
+   RETURN HOME BUTTON
+   ================================ */
+
+.return-home {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    background-color: #003b5c;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.return-home:hover {
+    background-color: #006d9c;
+}
+
+.return-home:focus {
+    outline: 3px solid #006d9c;
+    outline-offset: 3px;
 }
 
 
