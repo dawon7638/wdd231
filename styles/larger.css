@@ -4,9 +4,9 @@
 
 @media (min-width: 640px) {
 
-    /* ============================
+    /* ================================
        HEADER
-       ============================ */
+       ================================ */
 
     .header-top {
         max-width: 1200px;
@@ -14,19 +14,14 @@
         padding: 1rem 2rem;
     }
 
-    /* .site-branding img {
-        width: 100px;
-        height: 50x;
-    } */
-
     .site-branding span {
         font-size: 1.5rem;
     }
 
 
-    /* ============================
+    /* ================================
        NAVIGATION
-       ============================ */
+       ================================ */
 
     #menu-button {
         display: none;
@@ -51,54 +46,45 @@
     }
 
 
-    /* ============================
+    /* ================================
        MAIN
-       ============================ */
+       ================================ */
 
     main {
         padding: 2rem;
     }
 
-    main>h1 {
-        font-size: 2.25rem;
+    main > h1 {
         margin-bottom: 1.5rem;
+        font-size: 2.25rem;
     }
 
 
-    /* ============================
+    /* ================================
        HOME PAGE GRID
-       ============================ */
+       ================================ */
 
     .home-grid {
         grid-template-columns: 2fr 1fr;
         gap: 1.5rem;
     }
 
-
-    /* About Me spans the larger area */
-
     .about-section {
         grid-column: 1;
     }
 
-
-    /* Student Photo */
-
     .student-section {
         grid-column: 2;
     }
-
-
-    /* Course section spans full width */
 
     .course-section {
         grid-column: 1 / -1;
     }
 
 
-    /* ============================
+    /* ================================
        ABOUT ME
-       ============================ */
+       ================================ */
 
     .about-content {
         display: grid;
@@ -113,9 +99,9 @@
     }
 
 
-    /* ============================
+    /* ================================
        COURSE LIST
-       ============================ */
+       ================================ */
 
     #course-list {
         grid-template-columns: repeat(2, 1fr);
@@ -123,9 +109,9 @@
     }
 
 
-    /* ============================
+    /* ================================
        COURSE BUTTONS
-       ============================ */
+       ================================ */
 
     #course-buttons {
         justify-content: center;
@@ -136,9 +122,56 @@
     }
 
 
-    /* ============================
+    /* ================================
+       CHAMBER DIRECTORY
+       ================================ */
+
+    .member-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .member-card {
+        padding: 1.5rem;
+    }
+
+    .member-list .member-card {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        align-items: center;
+    }
+
+
+    /* ================================
+       JOIN PAGE
+       ================================ */
+
+    .join-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+        gap: 3rem;
+        align-items: start;
+    }
+
+    .application-section {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .membership-section {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .membership-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+
+    /* ================================
        FOOTER
-       ============================ */
+       ================================ */
 
     footer {
         padding: 2rem;
@@ -152,34 +185,38 @@
 
 @media (min-width: 900px) {
 
+    /* ================================
+       HOME PAGE GRID
+       ================================ */
+
     .home-grid {
         grid-template-columns: 2fr 1fr;
     }
+
+
+    /* ================================
+       COURSE LIST
+       ================================ */
 
     #course-list {
         grid-template-columns: repeat(3, 1fr);
     }
 
+
+    /* ================================
+       CHAMBER DIRECTORY
+       ================================ */
+
     .member-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 
-}
 
-/* ============================
-   CHAMBER DIRECTORY
-   ============================ */
+    /* ================================
+       JOIN PAGE
+       ================================ */
 
-.member-grid {
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.member-card {
-    padding: 1.5rem;
-}
-
-.member-list .member-card {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    align-items: center;
+    .join-layout {
+        grid-template-columns: minmax(0, 2fr) minmax(320px, 1fr);
+    }
 }

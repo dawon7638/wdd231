@@ -17,24 +17,32 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
 
     <link rel="icon" href="images/tyler-chamber-logo.png" type="image/png">
 
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
+    <script src="scripts/join.js" defer></script>
 </head>
 
 <body>
 
+    <!-- ================================
+         HEADER
+         ================================ -->
+
     <header>
+
         <div class="header-top">
 
             <div class="site-branding">
+
                 <img src="images/tyler-chamber-logo.png" alt="Tyler Chamber of Commerce logo">
 
                 <span>Tyler Chamber of Commerce</span>
+
             </div>
 
             <button id="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false">
@@ -49,28 +57,302 @@
             <a href="join.html" class="active">Join</a>
             <a href="discover.html">Discover</a>
         </nav>
+
     </header>
+
+
+    <!-- ================================
+         MAIN
+         ================================ -->
 
     <main>
 
         <h1>Join the Tyler Chamber of Commerce</h1>
 
-        <section class="under-construction">
+        <div class="join-layout">
 
-            <h2>Under Construction</h2>
 
-            <p>
-                Our membership application is currently under construction.
-            </p>
+            <!-- ================================
+                 MEMBERSHIP APPLICATION
+                 ================================ -->
 
-            <p>
-                Please check back soon for information about joining the
-                Tyler Chamber of Commerce.
-            </p>
+            <section class="application-section">
 
-        </section>
+                <h2>Membership Application</h2>
+
+                <form method="get" action="thankyou.html">
+
+                    <label>
+                        First Name
+                        <input type="text" name="first" title="Applicant First Name" autocomplete="given-name" required>
+                    </label>
+
+                    <label>
+                        Last Name
+                        <input type="text" name="last" title="Applicant Last Name" autocomplete="family-name" required>
+                    </label>
+
+                    <label>
+                        Organizational Title
+                        <input type="text" name="title" title="Please enter at least 7 letters, spaces, or hyphens"
+                            autocomplete="organization-title" pattern="[A-Za-z -]{7,}">
+                    </label>
+
+                    <label>
+                        Email Address
+                        <input type="email" name="email" title="Email Address" autocomplete="email"
+                            placeholder="example@email.com" required>
+                    </label>
+
+                    <label>
+                        Mobile Phone
+                        <input type="tel" name="phone" title="Mobile Phone Number" autocomplete="tel" required>
+                    </label>
+
+                    <label>
+                        Business / Organization Name
+                        <input type="text" name="organization" title="Business or Organization Name"
+                            autocomplete="organization" required>
+                    </label>
+
+                    <label>
+                        Business / Organization Description
+                        <textarea name="description" title="Business or Organization Description" rows="5"></textarea>
+                    </label>
+
+
+                    <!-- ================================
+                         MEMBERSHIP LEVEL OPTIONS
+                         ================================ -->
+
+                    <fieldset class="membership-options">
+
+                        <legend>Membership Level</legend>
+
+                        <label>
+                            <input type="radio" name="membership" value="np" required>
+                            NP Membership
+                        </label>
+
+                        <label>
+                            <input type="radio" name="membership" value="bronze">
+                            Bronze Membership
+                        </label>
+
+                        <label>
+                            <input type="radio" name="membership" value="silver">
+                            Silver Membership
+                        </label>
+
+                        <label>
+                            <input type="radio" name="membership" value="gold">
+                            Gold Membership
+                        </label>
+
+                    </fieldset>
+
+
+                    <!-- ================================
+                         TIMESTAMP
+                         ================================ -->
+
+                    <input type="hidden" name="timestamp" id="timestamp">
+
+
+                    <!-- ================================
+                         SUBMIT BUTTON
+                         ================================ -->
+
+                    <button type="submit" class="submit-button">
+                        Apply for Membership
+                    </button>
+
+                </form>
+
+            </section>
+
+
+            <!-- ================================
+                 MEMBERSHIP LEVELS
+                 ================================ -->
+
+            <section class="membership-section">
+
+                <h2>Membership Levels</h2>
+
+                <div class="membership-cards">
+
+                    <article class="membership-card">
+
+                        <h3>NP Membership</h3>
+
+                        <p>For nonprofit organizations</p>
+
+                        <a href="#np-modal" class="modal-link" data-modal="np-modal">
+                            Learn More
+                        </a>
+
+                    </article>
+
+
+                    <article class="membership-card">
+
+                        <h3>Bronze Membership</h3>
+
+                        <p>Build your local business network</p>
+
+                        <a href="#bronze-modal" class="modal-link" data-modal="bronze-modal">
+                            Learn More
+                        </a>
+
+                    </article>
+
+
+                    <article class="membership-card">
+
+                        <h3>Silver Membership</h3>
+
+                        <p>Expand your chamber benefits</p>
+
+                        <a href="#silver-modal" class="modal-link" data-modal="silver-modal">
+                            Learn More
+                        </a>
+
+                    </article>
+
+
+                    <article class="membership-card">
+
+                        <h3>Gold Membership</h3>
+
+                        <p>Maximum chamber exposure</p>
+
+                        <a href="#gold-modal" class="modal-link" data-modal="gold-modal">
+                            Learn More
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <!-- ================================
+             NP MEMBERSHIP MODAL
+             ================================ -->
+
+        <dialog id="np-modal" class="membership-modal">
+
+            <button type="button" class="close-modal" aria-label="Close NP membership information">
+                &times;
+            </button>
+
+            <h2>NP Membership</h2>
+
+            <p><strong>Benefits include:</strong></p>
+
+            <ul>
+                <li>Business directory listing</li>
+                <li>Networking opportunities</li>
+                <li>Community event invitations</li>
+                <li>Chamber newsletters</li>
+            </ul>
+
+            <p><strong>Cost: Free</strong></p>
+
+        </dialog>
+
+
+        <!-- ================================
+             BRONZE MEMBERSHIP MODAL
+             ================================ -->
+
+        <dialog id="bronze-modal" class="membership-modal">
+
+            <button type="button" class="close-modal" aria-label="Close Bronze membership information">
+                &times;
+            </button>
+
+            <h2>Bronze Membership</h2>
+
+            <p><strong>Benefits include:</strong></p>
+
+            <ul>
+                <li>All NP membership benefits</li>
+                <li>Business directory listing</li>
+                <li>Networking events</li>
+                <li>Member training opportunities</li>
+                <li>Event discounts</li>
+            </ul>
+
+            <p><strong>Cost: $100 annually</strong></p>
+
+        </dialog>
+
+
+        <!-- ================================
+             SILVER MEMBERSHIP MODAL
+             ================================ -->
+
+        <dialog id="silver-modal" class="membership-modal">
+
+            <button type="button" class="close-modal" aria-label="Close Silver membership information">
+                &times;
+            </button>
+
+            <h2>Silver Membership</h2>
+
+            <p><strong>Benefits include:</strong></p>
+
+            <ul>
+                <li>All Bronze membership benefits</li>
+                <li>Enhanced directory listing</li>
+                <li>Additional event discounts</li>
+                <li>Advertising opportunities</li>
+                <li>Priority training registration</li>
+            </ul>
+
+            <p><strong>Cost: $200 annually</strong></p>
+
+        </dialog>
+
+
+        <!-- ================================
+             GOLD MEMBERSHIP MODAL
+             ================================ -->
+
+        <dialog id="gold-modal" class="membership-modal">
+
+            <button type="button" class="close-modal" aria-label="Close Gold membership information">
+                &times;
+            </button>
+
+            <h2>Gold Membership</h2>
+
+            <p><strong>Benefits include:</strong></p>
+
+            <ul>
+                <li>All Silver membership benefits</li>
+                <li>Home page spotlight opportunities</li>
+                <li>Premium business directory listing</li>
+                <li>Priority event registration</li>
+                <li>Special networking events</li>
+                <li>Additional advertising opportunities</li>
+            </ul>
+
+            <p><strong>Cost: $300 annually</strong></p>
+
+        </dialog>
 
     </main>
+
+
+    <!-- ================================
+         FOOTER
+         ================================ -->
 
     <footer>
 
