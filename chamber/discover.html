@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,25 +6,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Discover | Tyler Chamber of Commerce</title>
+    <title>Discover Tyler | Tyler Chamber of Commerce</title>
 
     <meta name="description"
-        content="Discover local businesses, community resources, and opportunities in Tyler, Texas.">
+        content="Discover attractions, parks, museums, and places to visit in Tyler, Texas.">
 
     <meta name="author" content="Dawon Gregory">
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="chamber/images/tyler-chamber-logo.jpg" type="image/jpg">
 
+    <!-- CSS -->
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/discover.css">
 
-    <link rel="icon" href="images/tyler-chamber-logo.png" type="image/png">
-
+    <!-- JavaScript -->
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
+    <script src="scripts/discover.js" type="module"></script>
 </head>
 
 <body>
@@ -32,12 +40,20 @@
         <div class="header-top">
 
             <div class="site-branding">
-                <img src="images/tyler-chamber-logo.png" alt="Tyler Chamber of Commerce logo">
+                <img
+                    src="images/tyler-chamber-logo.png"
+                    alt="Tyler Chamber of Commerce logo"
+                    width="50"
+                    height="50">
 
                 <span>Tyler Chamber of Commerce</span>
             </div>
 
-            <button id="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false">
+            <button
+                id="menu-button"
+                type="button"
+                aria-label="Toggle navigation"
+                aria-expanded="false">
                 ☰
             </button>
 
@@ -47,26 +63,37 @@
             <a href="index.html">Home</a>
             <a href="directory.html">Directory</a>
             <a href="join.html">Join</a>
-            <a href="discover.html" class="active">Discover</a>
+            <a href="discover.html" class="active" aria-current="page">
+                Discover
+            </a>
         </nav>
     </header>
 
-    <main>
+    <main class="discover-main">
 
-        <h1>Discover Tyler</h1>
+        <h1>Discover Tyler, Texas</h1>
 
-        <section class="under-construction">
+        <p class="discover-intro">
+            Explore what makes Tyler, Texas a great place to
+            live, work, and visit. From beautiful gardens and
+            outdoor recreation to museums and family attractions,
+            there is something for everyone to enjoy.
+        </p>
 
-            <h2>Under Construction</h2>
+        <!-- Visitor Message -->
+        <aside class="visitor-message" aria-live="polite">
+            <p id="visit-message"></p>
+        </aside>
 
-            <p>
-                Our Discover Tyler page is currently under construction.
-            </p>
+        <!-- Discover Attractions -->
+        <section class="discover-section"
+            aria-labelledby="discover-heading">
 
-            <p>
-                Please check back soon to discover local businesses,
-                community resources, and attractions in the Tyler area.
-            </p>
+            <h2 id="discover-heading">Explore Tyler</h2>
+
+            <div id="discover-cards" class="discover-grid">
+                <!-- Cards are created by discover.js -->
+            </div>
 
         </section>
 
@@ -75,22 +102,18 @@
     <footer>
 
         <div class="social-links">
-
-            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
                 GitHub
             </a>
 
-            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
                 LinkedIn
             </a>
-
         </div>
 
         <p>
-            &copy;
-            <span id="currentyear"></span>
-            Tyler Chamber of Commerce |
-            Tyler, Texas
+            &copy; <span id="currentyear"></span>
+            Tyler Chamber of Commerce | Tyler, Texas
         </p>
 
         <p>
@@ -101,5 +124,4 @@
     </footer>
 
 </body>
-
 </html>
