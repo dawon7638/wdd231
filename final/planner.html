@@ -23,7 +23,11 @@
 
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.png?v=2" type="image/png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
@@ -44,46 +48,58 @@
         <h1>My Gear Planner</h1>
         <p>Review the gear you saved and plan your next guitar setup.</p>
         <section>
-            <h2>My saved favorites</h2>
-            <div id="favorites-list" class="grid" aria-live="polite"></div>
-        </section>
-        <section class="form-layout">
-            <h2>Plan your setup</h2>
-            <p>Complete the form to see a summary of your preferences. Your details are shown on the next page and are
-                not sent to a server.</p>
-            <form action="thankyou.html" method="get">
-                <div class="field"><label for="name">Your name *</label><input id="name" name="name" required
-                        autocomplete="name" maxlength="80"></div>
-                <div class="field"><label for="email">Email address *</label><input id="email" name="email" type="email"
-                        required autocomplete="email"></div>
-                <div class="field"><label for="experience">Experience level *</label><select id="experience"
-                        name="experience" required>
-                        <option value="">Choose one</option>
-                        <option>Beginner</option>
-                        <option>Intermediate</option>
-                        <option>Advanced</option>
-                    </select></div>
-                <div class="field"><label for="style">Playing style *</label><select id="style" name="style" required>
-                        <option value="">Choose one</option>
-                        <option>Blues</option>
-                        <option>Rock</option>
-                        <option>R&B / Neo-Soul</option>
-                        <option>Metal</option>
-                        <option>Other</option>
-                    </select></div>
-                <div class="field"><label for="budget">Gear budget *</label><select id="budget" name="budget" required>
-                        <option value="">Choose one</option>
-                        <option>Under $250</option>
-                        <option>$250–$500</option>
-                        <option>$500–$1,000</option>
-                        <option>Over $1,000</option>
-                    </select></div>
-                <div class="field"><label for="goal">What do you want to build? *</label><textarea id="goal" name="goal"
-                        rows="4" minlength="10" maxlength="500" required
-                        placeholder="Describe your guitar setup goal"></textarea></div><button type="submit">View my
-                    plan</button>
-            </form>
-        </section>
+
+            <section aria-labelledby="favorites-heading">
+                <h2 id="favorites-heading">My Saved Favorites</h2>
+
+                <p>
+                    Review the equipment you've saved while
+                    exploring guitars, amplifiers, and effects.
+                </p>
+
+                <div id="favorites-list" class="grid" aria-live="polite">
+                </div>
+            </section>
+            <section class="form-layout">
+                <h2>Plan your setup</h2>
+                <p>Complete the form to see a summary of your preferences. Your details are shown on the next page and
+                    are
+                    not sent to a server.</p>
+                <form action="thankyou.html" method="get">
+                    <div class="field"><label for="name">Your name *</label><input id="name" name="name" required
+                            autocomplete="name" maxlength="80"></div>
+                    <div class="field"><label for="email">Email address *</label><input id="email" name="email"
+                            type="email" required autocomplete="email"></div>
+                    <div class="field"><label for="experience">Experience level *</label><select id="experience"
+                            name="experience" required>
+                            <option value="">Choose one</option>
+                            <option>Beginner</option>
+                            <option>Intermediate</option>
+                            <option>Advanced</option>
+                        </select></div>
+                    <div class="field"><label for="style">Playing style *</label><select id="style" name="style"
+                            required>
+                            <option value="">Choose one</option>
+                            <option>Blues</option>
+                            <option>Rock</option>
+                            <option>R&B / Neo-Soul</option>
+                            <option>Metal</option>
+                            <option>Other</option>
+                        </select></div>
+                    <div class="field"><label for="budget">Gear budget *</label><select id="budget" name="budget"
+                            required>
+                            <option value="">Choose one</option>
+                            <option>Under $250</option>
+                            <option>$250–$500</option>
+                            <option>$500–$1,000</option>
+                            <option>Over $1,000</option>
+                        </select></div>
+                    <div class="field"><label for="goal">What do you want to build? *</label><textarea id="goal"
+                            name="goal" rows="4" minlength="10" maxlength="500" required
+                            placeholder="Describe your guitar setup goal"></textarea></div><button type="submit">View my
+                        plan</button>
+                </form>
+            </section>
     </main>
     <footer class="site-footer">
         <div class="footer-inner">

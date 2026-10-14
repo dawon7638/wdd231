@@ -22,7 +22,11 @@
 
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.png?v=2" type="image/png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
@@ -36,16 +40,74 @@
                     href="explore.html">Explore Gear</a><a href="planner.html">My Gear Planner</a></nav>
         </div>
     </header>
+
     <main id="main">
         <h1>Attributions</h1>
-        <p>This project uses original page copy and interface code. Product names are used for educational
-            identification purposes and remain the property of their owners.</p>
-        <p>Before publishing, verify product descriptions against manufacturer information and record any external
-            content or images used here.</p>
-        <p>Product manufacturers referenced include Ibanez, Fender, Gibson, PRS, Roland, Boss, Peavey, MXR, Line 6,
-            HeadRush, MOTU, Focusrite, Universal Audio, and Audient.</p>
-        <p><a href="index.html">Return home</a></p>
+
+        <section aria-labelledby="project-content">
+            <h2 id="project-content">Project Content</h2>
+            <p>
+                Guitar Gear Explorer is an educational website
+                created by Dawon Gregory for WDD231: Web
+                Frontend Development I at BYU-Idaho.
+            </p>
+            <p>
+                The website's HTML, CSS, JavaScript, layout,
+                and written explanations were developed
+                for this project.
+            </p>
+        </section>
+
+        <section aria-labelledby="product-information">
+            <h2 id="product-information">Product Information</h2>
+            <p>
+                Guitar equipment names, specifications,
+                and descriptions are provided for
+                educational and comparison purposes.
+            </p>
+            <p>
+                Manufacturers referenced include Ibanez,
+                Fender, Gibson, PRS, Roland, Boss, Peavey,
+                MXR, Line 6, HeadRush, MOTU, Focusrite,
+                Universal Audio, and Audient.
+            </p>
+            <p>
+                Additional guitar equipment information
+                may be found at
+                <a href="https://www.americanmusical.com/" target="_blank" rel="noopener noreferrer">
+                    American Musical Supply
+                </a>.
+            </p>
+        </section>
+
+        <section aria-labelledby="image-credits">
+            <h2 id="image-credits">Images and Graphics</h2>
+            <p>
+                Guitar Gear Explorer uses images and
+                graphics to help visitors identify and
+                compare equipment. Product photographs
+                and brand names remain the property
+                of their respective owners.
+            </p>
+        </section>
+
+        <section aria-labelledby="disclaimer">
+            <h2 id="disclaimer">Disclaimer</h2>
+            <p>
+                This website was created for educational
+                purposes and is not affiliated with or
+                endorsed by the equipment manufacturers
+                or retailers mentioned.
+            </p>
+        </section>
+
+        <p>
+            <a class="button" href="index.html">
+                Return Home
+            </a>
+        </p>
     </main>
+
     <footer class="site-footer">
         <div class="footer-inner">
             <p>© <span id="year"></span> Guitar Gear Explorer</p>
