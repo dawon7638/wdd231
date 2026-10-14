@@ -227,6 +227,7 @@ h1 {
     color: #17191d;
     font-weight: 700;
 }
+
 .hero .eyebrow {
     color: #ffd18d;
     font-weight: 600;
@@ -274,11 +275,14 @@ h1 {
     gap: 1rem;
 }
 
+
 /* =========================
    Cards
 ========================= */
 
 .card {
+    display: flex;
+    flex-direction: column;
     border: 1px solid var(--line);
     border-radius: 0.8rem;
     padding: 1.25rem;
@@ -294,8 +298,10 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin-top: 1rem;
+    margin-top: auto;
+    padding-top: 1rem;
 }
+
 
 /* =========================
    Text Styles
@@ -328,10 +334,14 @@ h1 {
 .controls label {
     display: grid;
     gap: 0.25rem;
+    flex: 1 1 200px;
+    min-width: 0;
 }
 
-.controls input {
-    min-width: 200px;
+.controls input,
+.controls select {
+    width: 100%;
+    min-width: 0;
 }
 
 /* =========================
@@ -378,6 +388,27 @@ textarea {
 }
 
 /* =========================
+   Form Results
+========================= */
+
+#form-results dl {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+}
+
+#form-results dt {
+    font-weight: 700;
+    margin-top: 0.75rem;
+}
+
+#form-results dd {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================
    Modal Dialog
 ========================= */
 
@@ -421,6 +452,21 @@ dialog::backdrop {
 ul {
     padding-left: 1.5rem;
 }
+
+/* =========================
+   Gear Image
+========================= */
+
+.gear-image {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 8px;
+    background-color: #fff;
+    margin-bottom: 1rem;
+}
+
 
 /* =========================
    Footer

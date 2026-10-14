@@ -19,9 +19,15 @@ async function load() {
 
         const items = await response.json();
 
+        if (!Array.isArray(items)) {
+            throw new Error('Unexpected data format');
+        }
+
         // Filter equipment based on saved favorites
+        const savedIds = getFavorites();
+
         const favorites = items.filter(item =>
-            getFavorites().includes(item.id)
+            savedIds.includes(item.id)
         );
 
         list.replaceChildren();
@@ -43,11 +49,27 @@ async function load() {
             const card = document.createElement('article');
             card.className = 'card';
 
+            // Create an image if the item has one
+            if (item.image) {
+                const img = document.createElement('img');
+
+                img.src = item.image;
+                img.alt = `${item.brand} ${item.name}`;
+                img.loading = 'lazy';
+                img.decoding = 'async';
+                img.className = 'gear-image';
+
+                card.append(img);
+            }
+
+            // Equipment title
             const title = document.createElement('h3');
             title.textContent = item.name;
 
+            // Equipment details
             const detail = document.createElement('p');
-            detail.textContent = `${item.brand} · ${item.category}`;
+            detail.textContent =
+                `${item.brand} · ${item.category}`;
 
             // Remove favorite button
             const button = document.createElement('button');
@@ -66,7 +88,7 @@ async function load() {
         }
 
     } catch (error) {
-        console.error(error);
+        console.error('Favorites loading error:', error);
 
         list.textContent =
             'Favorites could not be loaded. Try refreshing.';

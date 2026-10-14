@@ -2,7 +2,7 @@
 const target = document.querySelector('#form-results');
 
 if (target) {
-    const params = new URLSearchParams(location.search);
+    const params = new URLSearchParams(window.location.search);
 
     const labels = {
         name: 'Name',
@@ -28,7 +28,6 @@ if (target) {
         // Create the field label
         const dt = document.createElement('dt');
         dt.textContent = label;
-        dt.style.fontWeight = '700';
 
         // Create the field value
         const dd = document.createElement('dd');
