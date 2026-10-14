@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description"
+        content="Explore guitars, amplifiers, pedals and recording gear with Guitar Gear Explorer.">
+    <meta name="author" content="Site Author">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Home | Guitar Gear Explorer">
+    <meta property="og:description"
+        content="Explore guitars, amplifiers, pedals and recording gear with Guitar Gear Explorer.">
+    <meta property="og:url" content="https://dawon7638.github.io/wdd231/final/index.html">
+    <meta property="og:image" content="https://dawon7638.github.io/wdd231/final/images/social-preview.svg">
+    <title>Home | Guitar Gear Explorer</title>
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+
+<body><a class="skip" href="#main">Skip to main content</a>
+    <header class="site-header">
+        <div class="header-inner"><a class="brand" href="index.html"><span>♫</span> Guitar Gear Explorer</a><button
+                id="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">☰ Menu</button>
+            <nav class="site-nav" id="site-nav" aria-label="Main navigation"><a href="index.html"
+                    aria-current="page">Home</a><a href="explore.html">Explore Gear</a><a href="planner.html">My Gear
+                    Planner</a></nav>
+        </div>
+    </header>
+    <main id="main">
+        <section class="hero">
+            <img src="images/hero.png"
+                alt="Guitar Gear Explorer featuring an electric guitar, amplifier, and effects pedals" width="1916"
+                height="768" fetchpriority="high">
+            <p class="eyebrow" style="color:#ffd18d">Your sound starts here</p>
+            <h1>Find your perfect sound.</h1>
+
+            <p>
+                Discover guitars, amplifiers, effects, and recording equipment.<br>
+                Find the right gear for your sound.
+            </p>
+
+            <p><a class="button" href="explore.html">Explore equipment →</a></p>
+        </section>
+        <section aria-labelledby="why">
+            <h2 id="why">What can you explore?</h2>
+            <div class="grid">
+                <article class="card">
+                    <h3>Guitars & amplifiers</h3>
+                    <p>Compare the foundations of your tone, from guitar types to amp designs.</p>
+                </article>
+                <article class="card">
+                    <h3>Effects & processors</h3>
+                    <p>Discover pedals and multi-effects units that help shape your sound.</p>
+                </article>
+                <article class="card">
+                    <h3>Recording gear</h3>
+                    <p>Learn about audio interfaces and basic tools for capturing your playing.</p>
+                </article>
+            </div>
+        </section>
+        <section>
+            <h2>Make a gear shortlist</h2>
+            <p>Browse 20 equipment entries, save favorites, and review them on the planner page.</p><a class="button"
+                href="planner.html">Open my gear planner</a>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>© <span id="year"></span> Guitar Gear Explorer</p>
+            <div class="footer-links"><a href="attributions.html">Attributions</a><a href="https://www.youtube.com/"
+                    target="_blank" rel="noopener noreferrer">Video demonstration (replace with your public video
+                    URL)</a></div>
+            <p>Educational website project. Product names belong to their respective owners.</p>
+        </div>
+    </footer>
+    <script type="module" src="scripts/navigation.js"></script>
+</body>
+
+</html>

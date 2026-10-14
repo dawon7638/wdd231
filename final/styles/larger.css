@@ -1,0 +1,24 @@
+
+/* =========================
+   Desktop Layout
+========================= */
+
+@media (min-width: 920px) {
+
+    /* Hero Section */
+    .hero {
+        min-height: 320px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hero p {
+        font-size: 1.15rem;
+    }
+
+    /* Equipment Cards */
+    .card {
+        padding: 1.5rem;
+    }
+}

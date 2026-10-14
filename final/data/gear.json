@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "name": "Ibanez AZ2204",
+    "brand": "Ibanez",
+    "category": "Guitars",
+    "type": "Electric guitar",
+    "description": "Versatile solid-body guitar with HSS pickup configuration."
+  },
+  {
+    "id": 2,
+    "name": "Fender Player II Stratocaster",
+    "brand": "Fender",
+    "category": "Guitars",
+    "type": "Electric guitar",
+    "description": "Classic Strat-style electric guitar."
+  },
+  {
+    "id": 3,
+    "name": "Gibson Les Paul Standard",
+    "brand": "Gibson",
+    "category": "Guitars",
+    "type": "Electric guitar",
+    "description": "Single-cut electric guitar with humbuckers."
+  },
+  {
+    "id": 4,
+    "name": "PRS SE Custom 24",
+    "brand": "PRS",
+    "category": "Guitars",
+    "type": "Electric guitar",
+    "description": "Double-cut electric guitar with 24 frets."
+  },
+  {
+    "id": 5,
+    "name": "Roland JC-120",
+    "brand": "Roland",
+    "category": "Amplifiers",
+    "type": "Solid-state amplifier",
+    "description": "Stereo combo amplifier known for clean sounds and chorus."
+  },
+  {
+    "id": 6,
+    "name": "Boss Katana-100 Gen 3",
+    "brand": "Boss",
+    "category": "Amplifiers",
+    "type": "Modeling amplifier",
+    "description": "Versatile guitar combo with onboard effects."
+  },
+  {
+    "id": 7,
+    "name": "Fender Blues Junior IV",
+    "brand": "Fender",
+    "category": "Amplifiers",
+    "type": "Tube amplifier",
+    "description": "Compact tube combo for practice and gigs."
+  },
+  {
+    "id": 8,
+    "name": "Peavey Classic 30",
+    "brand": "Peavey",
+    "category": "Amplifiers",
+    "type": "Tube amplifier",
+    "description": "Tube combo amplifier for blues and rock."
+  },
+  {
+    "id": 9,
+    "name": "Boss DS-1",
+    "brand": "Boss",
+    "category": "Effects",
+    "type": "Distortion pedal",
+    "description": "Classic compact distortion effect."
+  },
+  {
+    "id": 10,
+    "name": "Ibanez Tube Screamer Mini",
+    "brand": "Ibanez",
+    "category": "Effects",
+    "type": "Overdrive pedal",
+    "description": "Compact overdrive for boosting an amp."
+  },
+  {
+    "id": 11,
+    "name": "Boss DD-8",
+    "brand": "Boss",
+    "category": "Effects",
+    "type": "Delay pedal",
+    "description": "Digital delay with multiple modes."
+  },
+  {
+    "id": 12,
+    "name": "MXR Phase 90",
+    "brand": "MXR",
+    "category": "Effects",
+    "type": "Phaser pedal",
+    "description": "Compact four-stage phaser effect."
+  },
+  {
+    "id": 13,
+    "name": "Line 6 Helix LT",
+    "brand": "Line 6",
+    "category": "Multi-effects",
+    "type": "Floor processor",
+    "description": "Amp modeling and multi-effects floor processor."
+  },
+  {
+    "id": 14,
+    "name": "Line 6 HX Stomp",
+    "brand": "Line 6",
+    "category": "Multi-effects",
+    "type": "Compact processor",
+    "description": "Compact amp and effects modeling processor."
+  },
+  {
+    "id": 15,
+    "name": "Boss GX-100",
+    "brand": "Boss",
+    "category": "Multi-effects",
+    "type": "Floor processor",
+    "description": "Multi-effects floor processor with touch interface."
+  },
+  {
+    "id": 16,
+    "name": "HeadRush MX5",
+    "brand": "HeadRush",
+    "category": "Multi-effects",
+    "type": "Compact processor",
+    "description": "Compact touchscreen multi-effects processor."
+  },
+  {
+    "id": 17,
+    "name": "MOTU M2",
+    "brand": "MOTU",
+    "category": "Recording",
+    "type": "Audio interface",
+    "description": "Two-input USB audio interface for recording."
+  },
+  {
+    "id": 18,
+    "name": "Focusrite Scarlett 2i2",
+    "brand": "Focusrite",
+    "category": "Recording",
+    "type": "Audio interface",
+    "description": "Two-channel USB recording interface."
+  },
+  {
+    "id": 19,
+    "name": "Universal Audio Volt 2",
+    "brand": "Universal Audio",
+    "category": "Recording",
+    "type": "Audio interface",
+    "description": "Two-input USB audio interface."
+  },
+  {
+    "id": 20,
+    "name": "Audient iD4",
+    "brand": "Audient",
+    "category": "Recording",
+    "type": "Audio interface",
+    "description": "Compact USB audio interface for home recording."
+  }
+]

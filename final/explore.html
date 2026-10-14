@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Explore Guitar Equipment | Guitar Gear Explorer</title>
+
+    <meta name="description"
+        content="Browse guitars, amplifiers, effects pedals, and recording equipment. Search, filter, compare details, and save your favorite gear.">
+
+    <meta name="author" content="Dawon Gregory">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title"
+        content="Explore Guitar Equipment | Guitar Gear Explorer">
+    <meta property="og:description"
+        content="Search guitar equipment by category, view specifications, and save your favorite guitars, amplifiers, and effects.">
+    <meta property="og:url"
+        content="https://dawon7638.github.io/wdd231/final/explore.html">
+    <meta property="og:image"
+        content="https://dawon7638.github.io/wdd231/final/images/hero.webp">
+    <meta property="og:image:alt"
+        content="Electric guitar, amplifier, and guitar effects pedals.">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+
+
+<body><a class="skip" href="#main">Skip to main content</a>
+    <header class="site-header">
+        <div class="header-inner"><a class="brand" href="index.html"><span>♫</span> Guitar Gear Explorer</a><button
+                id="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">☰ Menu</button>
+            <nav class="site-nav" id="site-nav" aria-label="Main navigation"><a href="index.html">Home</a><a
+                    href="explore.html" aria-current="page">Explore Gear</a><a href="planner.html">My Gear Planner</a>
+            </nav>
+        </div>
+    </header>
+    <main id="main">
+        <h1>Explore Guitar Gear</h1>
+        <p>Browse equipment by category, search by name or brand, and save favorites to your planner.</p>
+        <div class="controls"><label for="category-filter">Category<select id="category-filter">
+                    <option>All</option>
+                    <option>Guitars</option>
+                    <option>Amplifiers</option>
+                    <option>Effects</option>
+                    <option>Multi-effects</option>
+                    <option>Recording</option>
+                </select></label><label for="gear-search">Search equipment<input id="gear-search" type="search"
+                    placeholder="Search gear or brand"></label></div>
+        <p id="gear-status" class="status" role="status" aria-live="polite">Loading equipment…</p>
+        <div id="gear-list" class="grid"></div>
+        <dialog id="gear-dialog" aria-labelledby="dialog-title">
+            <h2 id="dialog-title"></h2>
+            <div id="dialog-content"></div><button id="dialog-close" type="button">Close</button>
+        </dialog>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>© <span id="year"></span> Guitar Gear Explorer</p>
+            <div class="footer-links"><a href="attributions.html">Attributions</a><a href="https://www.youtube.com/"
+                    target="_blank" rel="noopener noreferrer">Video demonstration (replace with your public video
+                    URL)</a></div>
+            <p>Educational website project. Product names belong to their respective owners.</p>
+        </div>
+    </footer>
+    <script type="module" src="scripts/navigation.js"></script>
+    <script type="module" src="scripts/gear.js"></script>
+</body>
+
+</html>

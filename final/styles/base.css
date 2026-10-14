@@ -1,0 +1,480 @@
+/* =========================
+   Root Variables
+========================= */
+
+:root {
+    color-scheme: light;
+    --ink: #1b232e;
+    --muted: #4b5563;
+    --accent: #9b5b12;
+    --gold: #e5a54b;
+    --paper: #faf8f3;
+    --line: #d7d9dd;
+}
+
+/* =========================
+   Global Styles
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font: 1rem/1.6 system-ui, -apple-system, Segoe UI, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+}
+
+a {
+    color: #824609;
+}
+
+a:hover {
+    text-decoration-thickness: 2px;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button,
+.button {
+    cursor: pointer;
+    border: 0;
+    border-radius: 0.5rem;
+    padding: 0.65rem 1rem;
+    background: #844909;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button:hover,
+.button:hover {
+    background: #633607;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #1565c0;
+    outline-offset: 3px;
+}
+
+/* =========================
+   Accessibility
+========================= */
+
+.skip {
+    position: absolute;
+    top: -100px;
+    left: 1rem;
+    background: #fff;
+    padding: 0.6rem;
+    z-index: 99;
+}
+
+.skip:focus {
+    top: 1rem;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* =========================
+   Header and Navigation
+========================= */
+
+.site-header {
+    background: #17191d;
+    color: #fff;
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: auto;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.brand {
+    color: #fff;
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 1.15rem;
+}
+
+.brand span {
+    color: var(--gold);
+}
+
+#menu-button {
+    background: #343b46;
+    border: 1px solid #aab2bf;
+}
+
+.site-nav {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.site-nav.open {
+    display: flex;
+}
+
+.site-nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.45rem 0.75rem;
+    border-radius: 0.4rem;
+}
+
+.site-nav a[aria-current="page"] {
+    background: #8b520f;
+    color: #fff;
+}
+
+/* =========================
+   Main Content
+========================= */
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 1.5rem 1rem 3rem;
+    min-height: 60vh;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3.4rem);
+}
+
+
+
+/* =========================
+   Hero Section
+========================= */
+
+.hero {
+    position: relative;
+    background: #252b34;
+    color: #fff;
+    border-radius: 1rem;
+    padding: 0;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    text-align: center;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero h1 {
+    text-align: center;
+}
+
+
+.hero p {
+    max-width: 60ch;
+    margin: 1rem auto;
+    text-align: center;
+    line-height: 1.6;
+    font-size: 1.15rem;
+}
+
+
+.hero a {
+    background: var(--gold);
+    color: #17191d;
+    font-weight: 700;
+}
+
+/* Hero Button */
+.hero .button {
+    display: inline-block;
+    margin: 1rem auto;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+}
+
+.hero .button:hover {
+    background: #f4ba66;
+}
+
+/* =========================
+   Responsive Hero
+========================= */
+
+@media (max-width: 649px) {
+    .hero {
+        border-radius: 0.5rem;
+    }
+
+    .hero .button {
+        display: block;
+        width: fit-content;
+        margin: 1rem auto;
+    }
+}
+
+
+
+/* =========================
+   Grid Layout
+========================= */
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+/* =========================
+   Cards
+========================= */
+
+.card {
+    border: 1px solid var(--line);
+    border-radius: 0.8rem;
+    padding: 1.25rem;
+    background: #fff;
+    min-width: 0;
+}
+
+.card h3 {
+    margin: 0.5rem 0;
+}
+
+.card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+/* =========================
+   Text Styles
+========================= */
+
+.muted {
+    color: var(--muted);
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #a25d11;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+/* =========================
+   Search and Filter Controls
+========================= */
+
+.controls {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    align-items: end;
+    margin: 1.25rem 0;
+}
+
+.controls label {
+    display: grid;
+    gap: 0.25rem;
+}
+
+.controls input {
+    min-width: 200px;
+}
+
+/* =========================
+   Buttons
+========================= */
+
+.secondary {
+    background: #e8e9ec;
+    color: #1b232e;
+}
+
+.secondary:hover {
+    background: #d5d9e0;
+}
+
+/* =========================
+   Form Elements
+========================= */
+
+input,
+select,
+textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #777f8b;
+    border-radius: 0.4rem;
+    background: #fff;
+    color: #1b232e;
+}
+
+.form-layout {
+    max-width: 680px;
+}
+
+.field {
+    margin: 1rem 0;
+}
+
+.field label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+}
+
+/* =========================
+   Modal Dialog
+========================= */
+
+dialog {
+    border: 0;
+    border-radius: 0.8rem;
+    box-shadow: 0 20px 60px #0006;
+    max-width: min(92vw, 560px);
+    padding: 1.5rem;
+}
+
+dialog::backdrop {
+    background: #0009;
+}
+
+/* =========================
+   Status and Messages
+========================= */
+
+.status {
+    min-height: 1.5rem;
+}
+
+.notice {
+    padding: 1rem;
+    border-left: 4px solid #9b5b12;
+    background: #fff3dc;
+    border-radius: 0.3rem;
+}
+
+.empty {
+    padding: 1rem;
+    border: 1px dashed #8a919a;
+    border-radius: 0.5rem;
+}
+
+/* =========================
+   Lists
+========================= */
+
+ul {
+    padding-left: 1.5rem;
+}
+
+/* =========================
+   Footer
+========================= */
+
+.site-footer {
+    background: #17191d;
+    color: #fff;
+    padding: 2rem 1rem;
+}
+
+.footer-inner {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.site-footer a {
+    color: #ffd18d;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* =========================
+   Tablet Layout
+========================= */
+
+@media (min-width: 650px) {
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #menu-button {
+        display: none;
+    }
+
+    .site-nav,
+    .site-nav.open {
+        width: auto;
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+/* =========================
+   Desktop Layout
+========================= */
+
+@media (min-width: 920px) {
+    .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* =========================
+   Reduced Motion
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
